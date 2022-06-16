@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+
+
+{% block body %}
+<div class="io_container">
+    <div id="pwd_add" class="input_output">
+        <h2>Add site credentials</h2>
+        <form id="pwd_submit" action="/" method="POST">
+            <input type="text" name="name" id="name" placeholder="Name">
+            <input type="text" name="sitename" id="sitename" placeholder="Site Name">
+            <input type="password" name="password" id="password" placeholder="Password">
+            <button id="submit">Submit</button>
+        </form>
+    </div>
+    <div id="pwd_retrieve" class="input_output">
+        <h2>Retrieve site credentials</h2>
+        <form id="retv-form" action="/retrieve" method="POST">
+            <input type="text" name="name_rt" id="name_rt" placeholder="Name">
+            <input type="text" name="site_name_rt" id="site_name_rt" placeholder="Site Name">
+            <button>Retrieve</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

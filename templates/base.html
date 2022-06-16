@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+    <title>pwdman</title>
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>pwd-manager</h1>
+            <div class="nav">
+                <a href="{{url_for('index')}}">Home</a>
+                <a href="{{url_for('submit')}}">Submit</a>
+                <a href="{{url_for('retrieve')}}">Retrieve</a>
+            </div>
+        </header>
+        {% block body %}{% endblock %}
+    </div>
+</body>
+
+</html>
